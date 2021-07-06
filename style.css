@@ -468,6 +468,7 @@ footer #social-media-footer ul li:hover a .fa-github {
 
 #post-container{
   display: flex;
+  /* flex-direction: column; */
 }
 
 #hobby{
@@ -495,6 +496,20 @@ footer #social-media-footer ul li:hover a .fa-github {
   box-shadow: inset 27px 0 51px -18px rgba(0,0,0,0.75);
 }
 
+.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.iframe-container iframe{
+  position:absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* Media Queries */
 
 @media (max-width: 900px) {
@@ -517,11 +532,6 @@ footer #social-media-footer ul li:hover a .fa-github {
   #hobby{
     width:100%;
     border-left:0;
-  }
-
-  #sidebar{
-    display : block;
-    width: 20%;
   }
 }
 
@@ -586,6 +596,26 @@ footer #social-media-footer ul li:hover a .fa-github {
 
   #logo-img {
     padding: 0;
+  }
+
+  #post-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #sidebar{
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 899px){
+  #post-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #sidebar{
+    width: auto;
   }
 }
 
